@@ -1,18 +1,56 @@
 <template>
   <div class="home">
-    <img alt="Vue logo" src="../assets/logo.png">
-    <HelloWorld msg="Welcome to Your Vue.js App"/>
+    <div class="categories-buttons-box">
+      <CategoryBtn
+        v-for="(c, index) in categories"
+        :key="index"
+        :idFiltered="idProduct"
+        :category="c"
+        @filter-by="getCatalogByCategory"
+      />
+    </div>
+    <EmptyList />
   </div>
 </template>
 
+<style>
+#app {
+  width: 100vw;
+  height: 100vh;
+  overflow-x: hidden;
+  overflow-y: hidden;
+}
+.categories-buttons-box {
+  display: flex;
+  justify-content: space-between;
+  column-gap: 32px;
+}
+</style>
+
 <script>
-// @ is an alias to /src
-import HelloWorld from '@/components/HelloWorld.vue'
+import EmptyList from "../components/EmptyList.vue";
+import CategoryBtn from "../components/CategoryBtn.vue";
+import { request } from "../plugins/axios-plugin";
 
 export default {
-  name: 'Home',
+  name: "Home",
+  data() {
+    return {
+      idProduct: null,
+      categories: [],
+    };
+  },
   components: {
-    HelloWorld
-  }
-}
+    EmptyList,
+    CategoryBtn,
+  },
+  methods: {
+    getCatalogByCategory() {},
+  },
+  mounted() {
+    request.get("categories").then((res) => {
+      this.categories = res.data;
+    });
+  },
+};
 </script>
