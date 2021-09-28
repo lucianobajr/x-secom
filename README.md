@@ -1,3 +1,18 @@
+<p align="center">
+  <img alt="GitHub top language" src="https://img.shields.io/github/languages/top/lucianobajr/x-secom.svg">
+
+  <img alt="Repository size" src="https://img.shields.io/github/repo-size/lucianobajr/x-secom.svg">
+  <a href="https://github.com/lucianobajr/x-secom/commits/master">
+    <img alt="GitHub last commit" src="https://img.shields.io/github/last-commit/lucianobajr/x-secom.svg">
+  </a>
+
+  <a href="https://github.com/lucianobajr/node-paypal/issues">
+    <img alt="Repository issues" src="https://img.shields.io/github/issues/lucianobajr/x-secom.svg">
+  </a>
+
+  <img alt=" " src="https://img.shields.io/github/license/lucianobajr/x-secom">
+<p>
+
 <h1 align="center">
     <img alt="" src="./.github/download.jpeg" width="300px"/>
     <br>
