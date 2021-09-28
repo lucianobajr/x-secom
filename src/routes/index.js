@@ -4,6 +4,9 @@ const routes = Router();
 const categories = require("./categories");
 const products = require("./products");
 
+routes.use("/", (req, res) => {
+  return res.json({ ok: "api is running!" });
+});
 routes.use("/categories", categories);
 routes.use("/products", products);
 
